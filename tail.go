@@ -22,6 +22,7 @@ var errStopAtEOF = errors.New("tail: stop at eof")
 // Line 结构体用于保存读取到的每行的对象
 type Line struct {
 	Text     string    // 当前行的内容
+	//Num      int       // 行数
 	//SeekInfo SeekInfo  // 开始读取数据的位置
 	Time     time.Time // 读取数据的当前时间
 	Err      error     // Error from tail
@@ -33,7 +34,6 @@ type SeekInfo struct {
 	Offset int64 // 偏移量
 	Whence int   // io.Seek*
 }
-
 
 // 关于配置的结构体
 type Config struct {
