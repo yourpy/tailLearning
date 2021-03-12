@@ -35,6 +35,7 @@ type SeekInfo struct {
 	Whence int   // io.Seek*
 }
 
+
 // 关于配置的结构体
 type Config struct {
 	Location  *SeekInfo // 打开文件开始读取时光标的位置
